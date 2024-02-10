@@ -5,14 +5,17 @@
 }
 .messagesContainer {
   height: calc(100vh - 88px);
+  overflow: auto;
+  padding: 12px;
+  max-width: 400px;
 }
 .chat form {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 6px;
-  height: 48px;
+  height: 88px;
   padding: 20px 0;
 }
-.chat form > input {
-  height: 80%;
+.chat form button {
+  height: 100%;
 }

@@ -4,6 +4,8 @@ import MessageList from '../../components/MessageList'
 import { getSocket } from '../../socket'
 import useMessageList from '../../hooks/useMessageList'
 import { useNavigate } from 'react-router-dom'
+import { Button, Input } from '@nextui-org/react'
+import { SendIcon } from '../../components/Icons'
 
 export default function Chat () {
   const navigate = useNavigate()
@@ -29,8 +31,16 @@ export default function Chat () {
         <MessageList messages={messageList} />
       </section>
       <form onSubmit={handleSubmit}>
-        <input value={message} onChange={handleInputChange} />
-        <button>Enviar</button>
+        <Input
+          type='text'
+          label='Mensaje'
+          className='max-w-xs'
+          value={message}
+          onChange={handleInputChange}
+        />
+        <Button isIconOnly color='danger' aria-label='Like' type='submit'>
+          <SendIcon />
+        </Button>
       </form>
     </main>
   )

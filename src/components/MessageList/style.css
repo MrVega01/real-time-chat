@@ -1,18 +1,26 @@
 .messages {
+  width: 100%;
   list-style: none;
   padding: 0;
-  height: inherit;
   display: flex;
   flex-direction: column;
   align-items: baseline;
   justify-content: end;
-  gap: 12px
+  gap: 12px;
 }
 .messages li{
   display: flex;
-  align-items: end;
-  flex-direction: column;
 }
-.messageOwner{
+.messages div > div span {
+  text-wrap: balance;
+  max-width: 350px;
+}
+.messageOwner {
+  align-self: flex-end;
+}
+.messageOwner > div{
+  flex-direction: row-reverse;
+}
+.messageOwner div > div span {
   align-self: flex-end;
 }
